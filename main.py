@@ -1,5 +1,20 @@
+
+from constants import *
+import pygame
+
 def main():
-    print('Starting Asteroids!')
+    pygame.init
+    screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+    x = 5
+    black = (0,0,0)
+    while x != 0 :
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return
+            
+        screen.fill(black)
+        pygame.display.flip()
+
 
 if __name__ == "__main__":
     main()
